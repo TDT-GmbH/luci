@@ -10,9 +10,13 @@ function rrdargs( graph, plugin, plugin_instance, dtype )
 		vlabel = "Celsius",
 		number_format = "%3.1lf%s",
 		data = {
-			types = { "temperature" },
+			types = { "gauge" },
 			options = {
-				temperature = { color = "ff0000", title = "Temperature", noarea=true },
+				temperature = {
+					color = "ff0000",
+					title = "Temperature",
+					noarea=true
+				},
 			}
 		}
 	}
