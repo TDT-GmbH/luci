@@ -18,7 +18,7 @@ function byte_format(byte)
 	end
 end
 
-m = Map("dockerd", translate("Docker"),
+m = Map("dockerd", translate("Docker - Overview"),
 	translate("DockerMan is a Simple Docker manager client for LuCI, If you have any issue please visit:") ..
 	" " ..
 	[[<a href="https://github.com/lisaac/luci-app-dockerman" target="_blank">]] ..

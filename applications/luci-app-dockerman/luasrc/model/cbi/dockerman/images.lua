@@ -68,7 +68,8 @@ end
 
 local image_list = get_images()
 
-m = SimpleForm("docker", translate("Docker"))
+m = SimpleForm("docker", translate("Docker - Images"),
+ translate("Management of docker images"))
 m.submit=false
 m.reset=false
 
@@ -77,7 +78,8 @@ local pull_value={
 	_registry="index.docker.io"
 }
 
-s = m:section(SimpleSection, translate("Pull Image"))
+s = m:section(SimpleSection, translate("Pull Image"),
+	translate("Pull docker image from a registry"))
 s.template="cbi/nullsection"
 
 o = s:option(Value, "_image_tag_name")
@@ -116,7 +118,8 @@ o.write = function(self, section)
 	luci.http.redirect(luci.dispatcher.build_url("admin/docker/images"))
 end
 
-s = m:section(SimpleSection, translate("Import Images"))
+s = m:section(SimpleSection, translate("Import image"),
+	translate("Select a docker image and import it into the system"))
 
 o = s:option(DummyValue, "_image_import")
 o.template = "dockerman/images_import"

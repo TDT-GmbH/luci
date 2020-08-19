@@ -90,7 +90,8 @@ end
 
 local container_list = get_containers()
 
-m = SimpleForm("docker", translate("Docker"))
+m = SimpleForm("docker", translate("Docker - Containers"),
+	translate("Management of docker containers"))
 m.submit=false
 m.reset=false
 

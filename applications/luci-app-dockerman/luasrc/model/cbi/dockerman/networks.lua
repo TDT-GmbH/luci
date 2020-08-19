@@ -47,7 +47,8 @@ end
 
 local network_list = get_networks()
 
-m = SimpleForm("docker", translate("Docker"))
+m = SimpleForm("docker", translate("Docker - Networks"),
+	translate("Overview of existing docker networks"))
 m.submit=false
 m.reset=false
 
@@ -96,7 +97,7 @@ s.rowcolors=false
 s.template="cbi/nullsection"
 
 o = s:option(Button, "_new")
-o.inputtitle= translate("New")
+o.inputtitle= translate("Add")
 o.template = "dockerman/cbi/inlinebutton"
 o.notitle=true
 o.inputstyle = "add"

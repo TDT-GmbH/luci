@@ -9,7 +9,7 @@ local m, s, o
 
 local dk = docker.new()
 
-m = SimpleForm("docker", translate("Docker"))
+m = SimpleForm("docker", translate("Docker - Network"))
 m.redirect = luci.dispatcher.build_url("admin", "docker", "networks")
 
 s = m:section(SimpleSection)

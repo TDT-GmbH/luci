@@ -66,7 +66,8 @@ end
 
 local volume_list = get_volumes()
 
-m = SimpleForm("docker", translate("Docker"))
+m = SimpleForm("docker", translate("Docker - Volumes"),
+	translate("Overview of existing docker volumes"))
 m.submit=false
 m.reset=false
 

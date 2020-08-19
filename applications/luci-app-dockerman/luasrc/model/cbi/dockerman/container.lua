@@ -195,7 +195,8 @@ local start_stop_remove = function(m, cmd)
 	end
 end
 
-m=SimpleForm("docker", container_info.Name:sub(2), translate("Docker Container") )
+m=SimpleForm("docker", translatef("Docker container: %s", container_info.Name:sub(2)),
+	translate("Manage docker container"))
 m.redirect = luci.dispatcher.build_url("admin/docker/containers")
 
 s = m:section(SimpleSection)
