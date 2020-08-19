@@ -748,13 +748,21 @@ elseif action == "console" then
 		end
 	end
 elseif action == "stats" then
-	local response = dk.containers:top({id = container_id, query = {ps_args="-aux"}})
 	local container_top
+
+	local response = dk.containers:top({
+		id = container_id,
+		query = {
+			ps_args="-aux"
+		}
+	})
 
 	if response.code == 200 then
 		container_top=response.body
 	else
-		response = dk.containers:top({id = container_id})
+		response = dk.containers:top({
+			id = container_id
+		})
 		if response.code == 200 then
 			container_top=response.body
 		end
