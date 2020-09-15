@@ -753,7 +753,7 @@ elseif action == "stats" then
 	local response = dk.containers:top({
 		id = container_id,
 		query = {
-			ps_args="-aux"
+			ps_args="-T"
 		}
 	})
 
